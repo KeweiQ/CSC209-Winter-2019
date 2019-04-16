@@ -14,11 +14,11 @@
 */
 int main(int argc, char **argv) {
     if (argc != 3) {
-        printf("%s\n", "Invalid");
+        printf("Invalid\n");
     } else if (strcmp(argv[1], argv[2]) == 0) {
-        printf("%s\n", "Same");
+        printf("Same\n");
     } else {
-        printf("%s\n", "Different");
+        printf("Different\n");
     }
     return 0;
 }
