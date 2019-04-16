@@ -91,9 +91,9 @@ int main() {
  * Definitely do not use strchr or other string functions to search here. (Why not?)
  */
 int find_network_newline(const char *buf, int n) {
-    for (int i = 0; i < n; i++) {
-        if (buf[i] == '\n') {
-            return (1 + i);
+    for (int i = 0; i < (n - 1); i++) {
+        if ((buf[i] == '\r') && (buf[i + 1] == '\n')) {
+            return (i + 2);
         }
     }
     return -1;
