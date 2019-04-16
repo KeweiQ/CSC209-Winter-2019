@@ -47,7 +47,6 @@ int main(void) {
     }
 
     // Write username into socket
-
     int num_written = write(sock_fd, buf, num_read);
     if (num_written != num_read) {
         perror("client: write");
@@ -94,7 +93,6 @@ int main(void) {
         }
 
         // If server socket is ready them read and print the value to stdout
-
         if (FD_ISSET(sock_fd, &listen_fds)) {
             num_read = read(sock_fd, buf, BUF_SIZE);
             buf[num_read] = '\0';
