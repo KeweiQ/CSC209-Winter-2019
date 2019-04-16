@@ -22,7 +22,7 @@ int main(int argc, char **argv) {
     for (int i = 0; i < 100; i++) {
         int num = random() % 100;
         if (fwrite(&num, sizeof(int), 1, fp) == 0) {
-            fprintf(stderr, "fread");
+            fprintf(stderr, "fwrite");
             exit(1);
         }
     }
